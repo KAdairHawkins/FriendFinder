@@ -1,10 +1,10 @@
 var path = require('path');
 
-var friends = require('../data/friends.js');
+var friends = require('../data/friends.js'); //exports friends.js
 
-module.exports = function(app) {
+module.exports = function(app) { //creates the api object to export...also with the "app" parameter
 
-app.get('/api/friends', function(req, res){
+app.get('/api/friends', function(req, res){ //
   res.json(friends);
 });
 

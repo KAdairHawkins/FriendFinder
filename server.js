@@ -8,8 +8,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-require('./app/routing/htmlRoutes')(app);
-require('./app/routing/apiRoutes')(app);
+require('./app/routing/htmlRoutes')(app); //connects survey.html, home.html, and resultRoutes.html to the server
+require('./app/routing/apiRoutes')(app); // connects friends.js to the server
+
 
 app.listen(5555, function(){
   console.log("App listening on PORT" + 5555);
